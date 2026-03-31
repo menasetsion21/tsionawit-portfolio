@@ -1,0 +1,297 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'IBM Plex Sans', -apple-system, sans-serif;
+    color: #1a1a1a;
+    background: #fafaf8;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    color: inherit;
+    text-decoration-color: #bbb;
+    text-underline-offset: 3px;
+    transition: text-decoration-color 0.2s;
+}
+
+a:hover {
+    text-decoration-color: #1a1a1a;
+}
+
+/* nav */
+.header {
+    position: sticky;
+    top: 0;
+    background: rgba(250, 250, 248, 0.9);
+    backdrop-filter: blur(10px);
+    z-index: 100;
+    border-bottom: 1px solid #eee;
+}
+
+nav {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 16px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'IBM Plex Serif', serif;
+    font-weight: 600;
+    font-size: 1.05rem;
+    text-decoration: none;
+    color: #1a1a1a;
+}
+
+.nav-links {
+    display: flex;
+    gap: 28px;
+}
+
+.nav-links a {
+    font-size: 0.85rem;
+    color: #666;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    color: #1a1a1a;
+}
+
+/* layout */
+main {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+section {
+    padding: 64px 0;
+    border-bottom: 1px solid #eee;
+}
+
+section:last-child {
+    border-bottom: none;
+}
+
+h2 {
+    font-family: 'IBM Plex Serif', serif;
+    font-size: 1.35rem;
+    font-weight: 600;
+    margin-bottom: 32px;
+    color: #1a1a1a;
+}
+
+/* intro */
+.intro {
+    padding-top: 80px;
+    padding-bottom: 64px;
+}
+
+.intro h1 {
+    font-family: 'IBM Plex Serif', serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 12px;
+    letter-spacing: -0.5px;
+}
+
+.role {
+    font-size: 1.05rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.bio {
+    font-size: 0.95rem;
+    color: #444;
+    max-width: 560px;
+    line-height: 1.8;
+}
+
+.intro-links {
+    margin-top: 24px;
+    font-size: 0.875rem;
+    color: #666;
+}
+
+.intro-links a {
+    color: #1a1a1a;
+}
+
+.sep {
+    margin: 0 10px;
+    color: #ccc;
+}
+
+/* jobs */
+.job {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 24px;
+    margin-bottom: 40px;
+}
+
+.job:last-child {
+    margin-bottom: 0;
+}
+
+.job-meta {
+    padding-top: 3px;
+}
+
+.job-date {
+    font-size: 0.8rem;
+    color: #888;
+    white-space: nowrap;
+}
+
+.job-tag {
+    display: block;
+    font-size: 0.7rem;
+    color: #999;
+    margin-top: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.job-body h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.at {
+    font-weight: 400;
+    color: #777;
+}
+
+.job-body ul {
+    list-style: none;
+    padding: 0;
+}
+
+.job-body li {
+    font-size: 0.875rem;
+    color: #555;
+    padding: 3px 0;
+    padding-left: 14px;
+    position: relative;
+    line-height: 1.7;
+}
+
+.job-body li::before {
+    content: '\2013';
+    position: absolute;
+    left: 0;
+    color: #bbb;
+}
+
+/* skills */
+.skills-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px 48px;
+}
+
+.skill-group h4 {
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.skill-group p {
+    font-size: 0.85rem;
+    color: #666;
+}
+
+/* education */
+.edu-item {
+    margin-bottom: 24px;
+}
+
+.edu-item h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+.edu-item p {
+    font-size: 0.875rem;
+    color: #666;
+}
+
+.certs {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.certs span {
+    font-size: 0.825rem;
+    color: #777;
+    padding-left: 14px;
+    position: relative;
+}
+
+.certs span::before {
+    content: '\2013';
+    position: absolute;
+    left: 0;
+    color: #bbb;
+}
+
+/* footer */
+footer {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 32px 24px;
+    text-align: center;
+}
+
+footer p {
+    font-size: 0.75rem;
+    color: #aaa;
+}
+
+/* mobile */
+@media (max-width: 600px) {
+    .intro h1 {
+        font-size: 1.8rem;
+    }
+
+    .job {
+        grid-template-columns: 1fr;
+        gap: 4px;
+    }
+
+    .job-meta {
+        padding-top: 0;
+    }
+
+    .skills-list {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .nav-links {
+        gap: 18px;
+    }
+
+    .nav-links a {
+        font-size: 0.8rem;
+    }
+}
