@@ -1,33 +1,27 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 80px;
+    scroll-padding-top: 72px;
 }
 
 body {
-    font-family: 'Inter', sans-serif;
-    background: #111;
-    color: #d4d4d4;
+    font-family: 'DM Sans', sans-serif;
+    background: #0e0e0e;
+    color: #c8c8c8;
     line-height: 1.7;
     -webkit-font-smoothing: antialiased;
 }
 
-a {
-    color: #d4a373;
-    text-decoration: none;
-    transition: color 0.2s;
+::selection {
+    background: #d4a373;
+    color: #0e0e0e;
 }
 
-a:hover {
-    color: #e8c49a;
-}
+a { color: #d4a373; text-decoration: none; }
+a:hover { color: #e2bb8a; }
 
-/* ---- nav ---- */
+/* ======================== NAV ======================== */
 nav {
     position: sticky;
     top: 0;
@@ -35,353 +29,460 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px 28px;
-    background: rgba(17, 17, 17, 0.85);
-    backdrop-filter: blur(12px);
+    padding: 18px 40px;
+    background: rgba(14, 14, 14, 0.88);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid #1a1a1a;
 }
 
 .logo {
-    font-family: 'Lora', serif;
-    font-size: 1.1rem;
-    font-weight: 600;
+    font-family: 'DM Serif Display', serif;
+    font-size: 1rem;
     color: #fff;
-    letter-spacing: 1px;
 }
 
-.nav-links {
+.nav-right {
     display: flex;
-    gap: 24px;
+    gap: 32px;
     align-items: center;
 }
 
-.nav-links a {
-    font-size: 0.8rem;
-    color: #888;
-    letter-spacing: 0.3px;
+.nav-right a {
+    font-size: 0.78rem;
+    color: #666;
+    letter-spacing: 0.5px;
+    transition: color 0.2s;
 }
 
-.nav-links a:hover {
-    color: #d4d4d4;
-}
+.nav-right a:hover { color: #ccc; }
 
-.nav-cta {
-    padding: 6px 16px;
-    border: 1px solid #333;
+.cta {
+    color: #0e0e0e !important;
+    background: #d4a373;
+    padding: 7px 18px;
     border-radius: 4px;
-    font-size: 0.8rem;
-    color: #d4d4d4 !important;
+    font-weight: 500;
+    font-size: 0.78rem !important;
 }
 
-.nav-cta:hover {
-    border-color: #d4a373;
-    color: #d4a373 !important;
+.cta:hover {
+    background: #e2bb8a;
+    color: #0e0e0e !important;
 }
 
-.menu-btn {
+.burger {
     display: none;
-    flex-direction: column;
-    gap: 5px;
     background: none;
     border: none;
     cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
     padding: 4px;
 }
 
-.menu-btn span {
+.burger span {
     display: block;
     width: 20px;
     height: 1.5px;
     background: #888;
+    transition: 0.2s;
 }
 
-/* ---- main ---- */
-main {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0 28px;
-}
-
-.divider {
-    height: 1px;
-    background: #222;
-    margin: 0;
-}
-
-section {
-    padding: 72px 0;
-}
-
-h2 {
-    font-family: 'Lora', serif;
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: #fff;
-    margin-bottom: 36px;
-    letter-spacing: 0.3px;
-}
-
-/* ---- hero ---- */
+/* ======================== HERO ======================== */
 .hero {
-    padding-top: 100px;
-    padding-bottom: 72px;
+    padding: 100px 40px 80px;
+    border-bottom: 1px solid #1a1a1a;
 }
 
-.label {
-    font-size: 0.75rem;
-    color: #d4a373;
+.hero-inner {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.eyebrow {
+    display: inline-block;
+    font-size: 0.7rem;
+    letter-spacing: 2.5px;
     text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 20px;
+    color: #d4a373;
+    margin-bottom: 24px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #2a2218;
 }
 
 .hero h1 {
-    font-family: 'Lora', serif;
-    font-size: clamp(2.2rem, 5vw, 3.2rem);
-    font-weight: 600;
-    color: #fff;
-    line-height: 1.15;
-    margin-bottom: 24px;
-    letter-spacing: -0.5px;
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(2rem, 4.5vw, 3.4rem);
+    color: #f0f0f0;
+    line-height: 1.2;
+    font-weight: 400;
+    margin-bottom: 40px;
 }
 
-.hero-desc {
-    font-size: 0.95rem;
-    color: #999;
-    max-width: 480px;
-    line-height: 1.8;
-    margin-bottom: 28px;
-}
-
-.hero-contact {
-    display: flex;
-    gap: 20px;
-    font-size: 0.85rem;
-}
-
-.hero-contact a {
-    color: #d4a373;
-}
-
-/* ---- jobs ---- */
-.job {
+.hero-bottom {
     display: grid;
-    grid-template-columns: 150px 1fr;
-    gap: 28px;
-    margin-bottom: 48px;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: start;
 }
 
-.job:last-child {
-    margin-bottom: 0;
+.hero-bottom p {
+    font-size: 0.92rem;
+    color: #888;
+    line-height: 1.85;
+    max-width: 400px;
 }
 
-.job-left {
-    padding-top: 2px;
+.hero-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-left: 24px;
+    border-left: 1px solid #222;
 }
 
-.date {
-    font-size: 0.78rem;
-    color: #666;
-}
-
-.tag {
+.meta-label {
     display: block;
     font-size: 0.65rem;
-    color: #555;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-top: 4px;
-}
-
-.job-right h3 {
-    font-size: 0.95rem;
-    font-weight: 600;
-    color: #e8e8e8;
+    letter-spacing: 1.5px;
+    color: #555;
     margin-bottom: 2px;
 }
 
-.company {
-    font-size: 0.82rem;
-    color: #777;
-    margin-bottom: 14px;
-}
-
-.job-right ul {
-    list-style: none;
-}
-
-.job-right li {
-    font-size: 0.84rem;
-    color: #999;
-    padding: 4px 0 4px 14px;
-    position: relative;
-    line-height: 1.7;
-}
-
-.job-right li::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 12px;
-    width: 4px;
-    height: 4px;
-    border-radius: 50%;
-    background: #444;
-}
-
-/* ---- skills ---- */
-.skills-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 28px;
-}
-
-.skills-grid h4 {
-    font-size: 0.82rem;
-    font-weight: 600;
-    color: #d4d4d4;
-    margin-bottom: 6px;
-}
-
-.skills-grid p {
-    font-size: 0.8rem;
-    color: #777;
-    line-height: 1.6;
-}
-
-/* ---- education ---- */
-.edu {
-    margin-bottom: 32px;
-}
-
-.edu h3 {
-    font-size: 0.95rem;
-    font-weight: 600;
-    color: #e8e8e8;
-    margin-bottom: 4px;
-}
-
-.certs-title {
-    font-size: 0.82rem;
-    font-weight: 600;
-    color: #d4d4d4;
-    margin-bottom: 12px;
-}
-
-.certs {
-    list-style: none;
-}
-
-.certs li {
-    font-size: 0.82rem;
-    color: #777;
-    padding: 3px 0 3px 14px;
-    position: relative;
-}
-
-.certs li::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 11px;
-    width: 4px;
-    height: 4px;
-    border-radius: 50%;
-    background: #444;
-}
-
-/* ---- footer ---- */
-footer {
-    border-top: 1px solid #222;
-    margin-top: 0;
-}
-
-.footer-inner {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 28px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.footer-name {
-    font-size: 0.85rem;
-    color: #d4d4d4;
+.meta-val {
+    font-size: 0.88rem;
+    color: #ccc;
     font-weight: 500;
 }
 
-.footer-sub {
+/* ======================== NUMBERS ======================== */
+.numbers {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-bottom: 1px solid #1a1a1a;
+}
+
+.num {
+    padding: 36px 24px;
+    text-align: center;
+    border-right: 1px solid #1a1a1a;
+}
+
+.num:last-child { border-right: none; }
+
+.num strong {
+    display: block;
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: #d4a373;
+    margin-bottom: 6px;
+}
+
+.num span {
+    font-size: 0.7rem;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+}
+
+/* ======================== SECTIONS SHARED ======================== */
+.work, .skills, .education {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 80px 40px;
+}
+
+.section-head {
+    margin-bottom: 48px;
+}
+
+.section-head h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #f0f0f0;
+    margin-bottom: 8px;
+}
+
+.section-head p {
+    font-size: 0.85rem;
+    color: #666;
+}
+
+/* ======================== ROLES ======================== */
+.roles {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.role {
+    background: #141414;
+    border-radius: 6px;
+    overflow: hidden;
+    transition: background 0.2s;
+}
+
+.role:hover {
+    background: #181818;
+}
+
+.role-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 24px 28px 0;
+}
+
+.role-top h3 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #e4e4e4;
+    margin-bottom: 2px;
+}
+
+.where {
+    font-size: 0.8rem;
+    color: #777;
+}
+
+.remote-badge {
+    display: inline-block;
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #d4a373;
+    border: 1px solid #2a2218;
+    border-radius: 3px;
+    padding: 1px 6px;
+    margin-left: 6px;
+    vertical-align: middle;
+}
+
+.role-top time {
     font-size: 0.75rem;
     color: #555;
-    margin-top: 2px;
+    white-space: nowrap;
+    padding-top: 3px;
+}
+
+.role-body {
+    padding: 16px 28px 24px;
+}
+
+.role-body p {
+    font-size: 0.84rem;
+    color: #999;
+    line-height: 1.75;
+    margin-bottom: 16px;
+}
+
+.role-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.role-tags span {
+    font-size: 0.68rem;
+    color: #888;
+    padding: 4px 10px;
+    border: 1px solid #252525;
+    border-radius: 3px;
+    background: rgba(255,255,255,0.015);
+    letter-spacing: 0.2px;
+}
+
+/* ======================== SKILLS ======================== */
+.skills {
+    border-top: 1px solid #1a1a1a;
+}
+
+.skill-cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+}
+
+.skill-col h4 {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #d4d4d4;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #1e1e1e;
+}
+
+.skill-col ul {
+    list-style: none;
+}
+
+.skill-col li {
+    font-size: 0.84rem;
+    color: #777;
+    padding: 7px 0;
+    border-bottom: 1px solid #151515;
+    transition: color 0.15s;
+}
+
+.skill-col li:last-child { border-bottom: none; }
+.skill-col li:hover { color: #bbb; }
+
+/* ======================== EDUCATION ======================== */
+.education {
+    border-top: 1px solid #1a1a1a;
+}
+
+.edu-card {
+    background: #141414;
+    border-radius: 6px;
+    padding: 28px;
+    margin-bottom: 32px;
+}
+
+.edu-card h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #e4e4e4;
+    margin-bottom: 4px;
+}
+
+.edu-card p {
+    font-size: 0.84rem;
+    color: #777;
+}
+
+.cert-list h4 {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #888;
+    margin-bottom: 14px;
+}
+
+.cert-items {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.cert-items span {
+    font-size: 0.82rem;
+    color: #666;
+    padding: 10px 0;
+    border-bottom: 1px solid #181818;
+}
+
+.cert-items span:last-child { border-bottom: none; }
+
+/* ======================== FOOTER ======================== */
+footer {
+    border-top: 1px solid #1a1a1a;
+    margin-top: 20px;
+}
+
+.footer-cta {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 80px 40px 60px;
+    text-align: center;
+}
+
+.footer-cta h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: #f0f0f0;
+    margin-bottom: 10px;
+}
+
+.footer-cta p {
+    font-size: 0.88rem;
+    color: #666;
+    margin-bottom: 28px;
 }
 
 .footer-links {
     display: flex;
-    gap: 20px;
+    justify-content: center;
+    gap: 28px;
 }
 
 .footer-links a {
-    font-size: 0.8rem;
-    color: #666;
+    font-size: 0.85rem;
+    color: #d4a373;
+    padding-bottom: 2px;
+    border-bottom: 1px solid transparent;
 }
 
 .footer-links a:hover {
-    color: #d4a373;
+    border-bottom-color: #d4a373;
 }
 
-/* ---- mobile ---- */
-@media (max-width: 640px) {
-    nav {
-        padding: 16px 20px;
-    }
+.footer-bottom {
+    text-align: center;
+    padding: 20px 40px;
+    border-top: 1px solid #1a1a1a;
+}
 
-    .nav-links {
+.footer-bottom span {
+    font-size: 0.7rem;
+    color: #444;
+}
+
+/* ======================== MOBILE ======================== */
+@media (max-width: 680px) {
+    nav { padding: 16px 20px; }
+
+    .nav-right {
         display: none;
         position: absolute;
-        top: 56px;
+        top: 54px;
         left: 0;
         right: 0;
         flex-direction: column;
-        background: rgba(17, 17, 17, 0.97);
+        background: rgba(14, 14, 14, 0.97);
         padding: 20px;
-        gap: 16px;
-        border-bottom: 1px solid #222;
+        gap: 14px;
+        border-bottom: 1px solid #1a1a1a;
     }
 
-    .nav-links.open {
-        display: flex;
-    }
+    .nav-right.show { display: flex; }
+    .burger { display: flex; }
 
-    .menu-btn {
-        display: flex;
-    }
+    .hero { padding: 60px 20px 56px; }
+    .hero h1 { font-size: 1.8rem; margin-bottom: 28px; }
 
-    main {
-        padding: 0 20px;
-    }
-
-    .hero {
-        padding-top: 60px;
-    }
-
-    .job {
+    .hero-bottom {
         grid-template-columns: 1fr;
-        gap: 6px;
-        margin-bottom: 36px;
+        gap: 28px;
     }
 
-    .skills-grid {
-        grid-template-columns: 1fr 1fr;
+    .hero-meta {
+        flex-direction: row;
+        flex-wrap: wrap;
         gap: 20px;
+        padding-left: 0;
+        border-left: none;
+        padding-top: 16px;
+        border-top: 1px solid #222;
     }
 
-    .footer-inner {
-        flex-direction: column;
-        gap: 16px;
-        text-align: center;
-        padding: 24px 20px;
-    }
+    .numbers { grid-template-columns: 1fr 1fr; }
+    .num { border-bottom: 1px solid #1a1a1a; }
+
+    .work, .skills, .education { padding: 56px 20px; }
+
+    .role-top { flex-direction: column; gap: 4px; }
+    .role-top time { padding-top: 0; }
+
+    .skill-cols { grid-template-columns: 1fr; gap: 28px; }
+
+    .footer-cta { padding: 56px 20px 44px; }
+    .footer-links { flex-direction: column; gap: 12px; }
 }
