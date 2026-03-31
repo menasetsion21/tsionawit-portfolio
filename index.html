@@ -7,132 +7,153 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Lora:wght@500;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <header class="header">
-        <nav>
-            <a href="#" class="logo">tsionawit.</a>
-            <div class="nav-links">
-                <a href="#work">Work</a>
-                <a href="#skills">Skills</a>
-                <a href="#education">Education</a>
-                <a href="mailto:menasetsion21@gmail.com">Say hi</a>
-            </div>
-        </nav>
-    </header>
+    <nav>
+        <a href="#" class="logo">TM</a>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#work">Experience</a>
+            <a href="#skills">Skills</a>
+            <a href="#education">Education</a>
+            <a href="mailto:menasetsion21@gmail.com" class="nav-cta">Contact</a>
+        </div>
+        <button class="menu-btn" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+            <span></span><span></span>
+        </button>
+    </nav>
 
     <main>
 
-        <section class="intro">
-            <h1>Tsionawit Menase</h1>
-            <p class="role">Marketing Officer based in Addis Ababa, working remotely.</p>
-            <p class="bio">I help brands grow through content strategy, visual design, and email marketing. I've spent the last couple of years building campaigns, managing client relationships, and figuring out what actually makes people click. I care about work that's clear, honest, and gets results.</p>
-            <div class="intro-links">
+        <section class="hero" id="about">
+            <p class="label">Marketing Officer</p>
+            <h1>Tsionawit<br>Menase</h1>
+            <p class="hero-desc">I build brand presence through content strategy, visual design, and email campaigns. Currently working remotely from Addis Ababa.</p>
+            <div class="hero-contact">
                 <a href="mailto:menasetsion21@gmail.com">menasetsion21@gmail.com</a>
-                <span class="sep">/</span>
                 <a href="https://www.linkedin.com/in/tsionawitmenase/" target="_blank" rel="noopener">LinkedIn</a>
             </div>
         </section>
 
-        <section id="work">
-            <h2>Where I've worked</h2>
+        <div class="divider"></div>
 
-            <article class="job">
-                <div class="job-meta">
-                    <span class="job-date">Feb &ndash; Jun 2025</span>
+        <section id="work">
+            <h2>Experience</h2>
+
+            <div class="job">
+                <div class="job-left">
+                    <span class="date">Feb &ndash; Jun 2025</span>
                 </div>
-                <div class="job-body">
-                    <h3>Marketing Officer <span class="at">at Mici Business Pty Ltd</span></h3>
+                <div class="job-right">
+                    <h3>Marketing Officer</h3>
+                    <p class="company">Mici Business Pty Ltd</p>
                     <ul>
-                        <li>Ran a content calendar across Facebook and Instagram using short-form video and travel guides &mdash; grew the accounts by 20%.</li>
-                        <li>Scripted and produced video content that consistently hit monthly view targets and brought in new followers organically.</li>
-                        <li>Designed all the visual stuff (flyers, brochures, digital banners) in Canva. Kept the brand looking consistent everywhere.</li>
-                        <li>Set up and managed email campaigns in Mailchimp &mdash; welcome sequences, seasonal promos, subscriber list hygiene.</li>
+                        <li>Ran a structured content calendar on Facebook and Instagram &mdash; grew the brand's social presence by 20% through short-form video and travel guides.</li>
+                        <li>Scripted and produced video content that hit consistent monthly view targets and expanded organic reach.</li>
+                        <li>Designed all visual materials (flyers, brochures, banners) in Canva, keeping brand identity tight across platforms.</li>
+                        <li>Managed Mailchimp campaigns end-to-end &mdash; welcome sequences, seasonal promos, list maintenance.</li>
                     </ul>
                 </div>
-            </article>
+            </div>
 
-            <article class="job">
-                <div class="job-meta">
-                    <span class="job-date">Apr &ndash; Jul 2025</span>
+            <div class="job">
+                <div class="job-left">
+                    <span class="date">Apr &ndash; Jul 2025</span>
                 </div>
-                <div class="job-body">
-                    <h3>Virtual Assistant <span class="at">at ALX Program</span></h3>
+                <div class="job-right">
+                    <h3>Virtual Assistant</h3>
+                    <p class="company">ALX Program</p>
                     <ul>
                         <li>Trained in email management, scheduling, and customer support workflows.</li>
-                        <li>Did hands-on projects in data entry, web research, and data mining &mdash; detail-oriented work.</li>
-                        <li>Practiced professional communication and phone etiquette for real client scenarios.</li>
-                        <li>Got comfortable with remote collaboration and task management tools.</li>
+                        <li>Completed hands-on projects in data entry, web research, and data mining.</li>
+                        <li>Built professional communication skills through real client interaction scenarios.</li>
+                        <li>Worked with remote collaboration and task management tools daily.</li>
                     </ul>
                 </div>
-            </article>
+            </div>
 
-            <article class="job">
-                <div class="job-meta">
-                    <span class="job-date">Jul 2024 &ndash; Jan 2025</span>
-                    <span class="job-tag">Remote</span>
+            <div class="job">
+                <div class="job-left">
+                    <span class="date">Jul 2024 &ndash; Jan 2025</span>
+                    <span class="tag">Remote</span>
                 </div>
-                <div class="job-body">
-                    <h3>Customer Support Rep <span class="at">at Zewd Business Group</span></h3>
+                <div class="job-right">
+                    <h3>Customer Support Representative</h3>
+                    <p class="company">Zewd Business Group</p>
                     <ul>
-                        <li>Handled 100+ daily conversations over phone, email, and WhatsApp. 100% same-day response rate.</li>
-                        <li>Fixed 90% of student tech issues on my own &mdash; software access, course navigation, the usual.</li>
-                        <li>Built out FAQ templates and quick-reply workflows that cut response times by 30%.</li>
-                        <li>Kept satisfaction above 85% by actually listening and following through on concerns.</li>
+                        <li>Handled 100+ daily conversations across phone, email, and WhatsApp with a 100% same-day response rate.</li>
+                        <li>Resolved 90% of student technical issues independently &mdash; software access, course navigation.</li>
+                        <li>Built FAQ templates and quick-reply workflows that cut average response time by 30%.</li>
+                        <li>Maintained 85%+ satisfaction by following through on every concern.</li>
                     </ul>
                 </div>
-            </article>
+            </div>
         </section>
+
+        <div class="divider"></div>
 
         <section id="skills">
-            <h2>What I work with</h2>
-            <div class="skills-list">
-                <div class="skill-group">
-                    <h4>Design &amp; Media</h4>
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div>
+                    <h4>Design & Media</h4>
                     <p>Canva, DaVinci Resolve, visual branding</p>
                 </div>
-                <div class="skill-group">
-                    <h4>Marketing</h4>
-                    <p>Meta Business Suite, Mailchimp, CRM management</p>
+                <div>
+                    <h4>Marketing Tools</h4>
+                    <p>Meta Business Suite, Mailchimp, CRM systems</p>
                 </div>
-                <div class="skill-group">
-                    <h4>Strategy</h4>
-                    <p>SEO copywriting, content scheduling, lead gen</p>
+                <div>
+                    <h4>Digital Strategy</h4>
+                    <p>SEO copywriting, content scheduling, lead generation</p>
                 </div>
-                <div class="skill-group">
-                    <h4>Client work</h4>
+                <div>
+                    <h4>Sales & Service</h4>
                     <p>Lead conversion, high-volume support, admissions consulting</p>
                 </div>
-                <div class="skill-group">
+                <div>
                     <h4>Communication</h4>
-                    <p>Phone, email, WhatsApp &mdash; conflict resolution, professional correspondence</p>
+                    <p>Phone, email, WhatsApp &mdash; conflict resolution</p>
                 </div>
-                <div class="skill-group">
+                <div>
                     <h4>Operations</h4>
-                    <p>Data management, process optimization, technical troubleshooting</p>
+                    <p>Data management, process optimization, tech support</p>
                 </div>
             </div>
         </section>
 
+        <div class="divider"></div>
+
         <section id="education">
-            <h2>Education &amp; certs</h2>
-            <div class="edu-item">
+            <h2>Education</h2>
+            <div class="edu">
                 <h3>Bachelor's in Marketing Management</h3>
-                <p>Hope Enterprise University College, Addis Ababa</p>
+                <p class="company">Hope Enterprise University College &mdash; Addis Ababa, Ethiopia</p>
             </div>
-            <div class="certs">
-                <span>ALX Virtual Assistant Training</span>
-                <span>SKU/Product Awareness &mdash; LinkedIn Learning</span>
-                <span>Salesperson Training &mdash; Golden Sales Training Institution</span>
-            </div>
+
+            <h4 class="certs-title">Certifications</h4>
+            <ul class="certs">
+                <li>ALX Virtual Assistant Training</li>
+                <li>SKU/Product Awareness &mdash; LinkedIn Learning</li>
+                <li>Salesperson Training &mdash; Golden Sales Training Institution</li>
+            </ul>
         </section>
 
     </main>
 
     <footer>
-        <p>Tsionawit Menase &middot; 2025</p>
+        <div class="footer-inner">
+            <div>
+                <p class="footer-name">Tsionawit Menase</p>
+                <p class="footer-sub">Marketing Officer &middot; Addis Ababa</p>
+            </div>
+            <div class="footer-links">
+                <a href="mailto:menasetsion21@gmail.com">Email</a>
+                <a href="https://www.linkedin.com/in/tsionawitmenase/" target="_blank" rel="noopener">LinkedIn</a>
+            </div>
+        </div>
     </footer>
 
 </body>
